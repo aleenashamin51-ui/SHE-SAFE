@@ -2,27 +2,28 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# SHE SAFE 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: CTRL+EXPERIENCE
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: ALEENA R SHAMIN - MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY
+- Member 2: DIYA A - MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://mug-fun-69135483.figma.site/
+
 
 ### Project Description
-[2-3 lines about what your project does]
+[WEBSITE FOR WOMEN SAFETY AND OTHER SAFETY RELATED ISSUES.USING AI INTEGRATED WEB
 
 ### The Problem statement
-[What problem are you solving?]
+WOMEN FACE SAFETY ISSUES WHICH REQUIRE IMMEDIATE RESPONSE AND ACTION INSTEAD OF WAITING FOR A LONG CALL
 
 ### The Solution
-[How are you solving it?]
+OUR WEBSITE INTEGRATES AI ALSO AND PROVIDES SENSOR AND DETECTION FOR PREVEVNTION
 
 ---
 
@@ -31,7 +32,7 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
+- Languages used: [e.g.,HTML]
 - Frameworks used: [e.g., React, Django, Spring Boot]
 - Libraries used: [e.g., axios, pandas, JUnit]
 - Tools used: [e.g., VS Code, Git, Docker]
@@ -46,10 +47,10 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: ALERT PAGE:FOR RISK ALERTS
+- FEATURE 2:DEFENCE MODE:AI INTEGRATED TOOLS
+- SMART MAP:FOR LOW RISK AREAS
+- ANALYTICS:GRAPH AND PLOTS BASED ON SAFETY ISSUES
 
 ---
 
@@ -85,12 +86,21 @@ List the key features of your project:
 
 ![Screenshot1](Add screenshot 1 here with proper name)
 *Add caption explaining what this shows*
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1e33beb7-dff4-41ef-8c05-cb6f92bb9034" />
+ALERT PAGE:Based on crimes,alerts r provided for each area with percentage.
+
 
 ![Screenshot2](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/37923684-ae19-4a32-9d0c-b5828a848280" />
+smart map
+for showing least risky areas and fastest distances for convenience and time
+
 
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/594a5a32-5e54-484c-8a63-0b56a4e1deb4" />
+ai integrated defense mode tools
 
 #### Diagrams
 
@@ -138,6 +148,7 @@ List the key features of your project:
 #### API Documentation
 
 **Base URL:** `https://api.yourproject.com`
+https://mug-fun-69135483.figma.site/smart-map
 
 ##### Endpoints
 
@@ -170,7 +181,303 @@ List the key features of your project:
   "message": "Operation completed"
 }
 ```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SheSafe Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
+:root{
+  --primary:#5E17EB;
+  --safe:#10B981;
+  --alert:#FF4D4D;
+  --accent:#14B8A6;
+  --bg:#F8F9FB;
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:var(--bg);display:flex;min-height:100vh;color:#111;}
+
+.sidebar{
+  width:240px;
+  background:linear-gradient(180deg,#5E17EB,#7B3FF2);
+  color:white;
+  padding:32px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.sidebar h2{font-weight:700;}
+.nav-item{
+  padding:12px 16px;
+  border-radius:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.nav-item:hover{
+  background:rgba(255,255,255,0.15);
+}
+
+.main{
+  flex:1;
+  padding:32px;
+}
+
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(20px);
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.08);
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:24px;
+}
+
+.risk-meter{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  font-weight:700;
+  background:conic-gradient(
+    #10B981 0% 30%,
+    #FFC107 30% 60%,
+    #FF4D4D 60% 100%
+  );
+  margin:24px auto;
+}
+
+.risk-inner{
+  width:150px;
+  height:150px;
+  background:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.sos-btn{
+  display:block;
+  margin:32px auto;
+  padding:16px 40px;
+  border-radius:50px;
+  border:none;
+  font-size:18px;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(135deg,#FF4D4D,#FF7A7A);
+  box-shadow:0 0 30px rgba(255,77,77,0.6);
+  cursor:pointer;
+  transition:0.3s;
+}
+.sos-btn:hover{
+  transform:scale(1.05);
+}
+
+.map-placeholder{
+  height:300px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#d9d9d9,#c4c4c4);
+  margin-bottom:24px;
+}
+
+.route-card{
+  padding:16px;
+  border-radius:16px;
+  margin-bottom:16px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.safe-route{background:#E6F9F1;}
+.fast-route{background:#FFF4E5;}
+
+.defense-mode{
+  background:#111;
+  color:white;
+  min-height:100vh;
+  padding:32px;
+}
+
+.toggle-card{
+  padding:16px;
+  border-radius:16px;
+  margin-bottom:16px;
+  background:#1E1E1E;
+  display:flex;
+  justify-content:space-between;
+}
+
+.badge{
+  background:#FF4D4D;
+  padding:4px 12px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+/* Mobile */
+
+.mobile-nav{
+  display:none;
+}
+
+@media(max-width:768px){
+
+.sidebar{display:none;}
+
+.mobile-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:white;
+  display:flex;
+  justify-content:space-around;
+  padding:12px;
+  border-top-left-radius:24px;
+  border-top-right-radius:24px;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.1);
+}
+
+.floating-sos{
+  position:fixed;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#FF4D4D,#FF7A7A);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:24px;
+  box-shadow:0 0 25px rgba(255,77,77,0.7);
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>SheSafe</h2>
+  <div class="nav-item">Home</div>
+  <div class="nav-item">Smart Map</div>
+  <div class="nav-item">Defense Mode</div>
+  <div class="nav-item">Community</div>
+  <div class="nav-item">Insights</div>
+</div>
+
+<div class="main">
+
+  <div class="header">
+    <div>
+      <h1>Good Evening</h1>
+      <p>📍 Kochi, Kerala</p>
+    </div>
+  </div>
+
+  <div class="glass">
+    <div class="risk-meter">
+      <div class="risk-inner">48</div>
+    </div>
+    <p style="text-align:center;font-weight:500;">
+      Area Risk: Moderate – 48/100
+    </p>
+
+    <div class="glass" style="margin-top:24px;">
+      <h4>Why?</h4>
+      <ul style="margin-top:12px;line-height:1.8;">
+        <li>Low lighting</li>
+        <li>Late hour</li>
+        <li>Low crowd density</li>
+      </ul>
+    </div>
+
+    <button class="sos-btn">SOS Emergency</button>
+  </div>
+
+  <br><br>
+
+  <div class="glass">
+    <h2>Smart Map</h2>
+    <div class="map-placeholder"></div>
+
+    <div style="margin-bottom:16px;">
+      <button>Safe Route</button>
+      <button>Fast Route</button>
+      <button>Women Safe Zones</button>
+    </div>
+
+    <div class="route-card safe-route">
+      <div>Safest – Risk 22%</div>
+      <div>14 mins</div>
+    </div>
+
+    <div class="route-card fast-route">
+      <div>Fastest – Risk 48%</div>
+      <div>9 mins</div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="defense-mode">
+    <h2>Defense Mode</h2>
+
+    <div class="toggle-card">
+      <span>Anti-Stalker Mode</span>
+      <span class="badge">Protection Active</span>
+    </div>
+
+    <div class="toggle-card">
+      <span>Stealth SOS</span>
+    </div>
+
+    <div class="toggle-card">
+      <span>Fake Call Generator</span>
+    </div>
+
+    <div class="toggle-card">
+      <span>Auto Evidence Recording</span>
+    </div>
+
+    <div class="toggle-card">
+      <span>Voice AI Detection</span>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="mobile-nav">
+  <div>Home</div>
+  <div>Map</div>
+  <div>Defense</div>
+  <div>Community</div>
+  <div>Insights</div>
+</div>
+
+<div class="floating-sos">SOS</div>
+
+</body>
+</html>
 [Add more endpoints as needed...]
 
 ---
